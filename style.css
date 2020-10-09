@@ -1,0 +1,236 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body{
+   position: relative;
+   font-family: "lato";
+   height: 100vh;
+   }
+   alart{
+     background-color: #ED4D4D;
+   }
+    
+   .wrapper{
+   position: absolute;
+   margin-top:100px;
+   left: 50%;
+   width: 650px;
+   height: 450px;
+   transform: translate(-50%);
+   float: left;
+   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+   }
+   .player-0-panal,
+   .player-1-panal{
+    width: 50%;
+    height: 450px;
+    background-color:#fff;
+    float: left;
+    }
+    
+   /****************
+      Player Style 
+    ****************/
+    .player-name {
+    font-size: 2rem;
+    margin-top:100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight:100;
+    color:rgb(90, 90, 90);
+    letter-spacing: 2px;
+    }
+   .player-score{
+    font-size: 50px;
+    font-weight:100;
+    text-align: center;
+    margin-top: 30px;
+    color: #ED4D4D;
+    letter-spacing: 1px;
+    }
+   .player-current-box{
+    background-color: #ED4D4D;
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 120px;
+    text-align: center;
+    }
+   .player-current-label{
+    margin-top: 8px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    }
+   .player-current-score{
+    padding-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    }
+   /******************
+     Button Style
+    ******************/
+    .btn-new{
+    all: unset;
+    position: absolute;
+    top: 7%;
+    left: 55%;
+    transform: translate(-70%);
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    }
+    .btn-new i{
+     position: absolute;
+     font-size:1.5rem; 
+     margin-left: -28px;
+     margin-top: -6px;
+     color:#ED4D4D ;
+     }
+    .btn-roll{
+     all: unset;
+     position: absolute;
+     top: 65%;
+     left: 54%;
+     transform: translate(-70%);
+     padding: 10px 20px;
+     text-transform: uppercase;
+     }
+    .btn-roll i,
+    .btn-hold i{
+     font-size:1.4rem;
+     margin-right:10px ;
+     margin-top: -4px;
+     color:#ED4D4D;
+     transition: margin 0.3s;
+     }
+    .btn-hold{
+     all: unset;
+     position: absolute;
+     top: 75%;
+     left: 53%;
+     transform: translate(-70%);
+     padding: 10px 20px;
+     text-transform: uppercase;
+     }
+     
+    .dice{
+     width: 70px;
+     position: absolute;
+     top: 30%;
+     left: 53%;
+     transform: translate(-70%);
+     }
+ 
+       
+         
+     .active{ 
+     background-color: #f7f7f7;
+     }
+     /* .active, .player-name{
+    font-weight: 300;
+    } */
+    .active .player-name::after{
+      content: "\2022";
+      font-size: 40px;
+      position: absolute;
+      color: #ED4D4D;
+      top:93px;
+      margin-right: 3px;
+      
+
+    }
+    .winner{
+      background-color: #f7f7f7;
+    }
+    .winner .player-name{
+      font-weight: 300;
+      color: #ED4D4D;
+    }
+
+    /******************
+    @media query
+    ******************/
+    @media(max-width:860px){
+      .wrapper{
+        width: 650px;
+        height: 450px;
+      }
+    }
+    @media(max-width:645px){
+      .wrapper{
+        width: 500px;
+      }
+      .player-current-box{
+        margin-left: 90px;
+
+      }
+      
+    }
+    @media(max-width:414px){
+      .wrapper{
+        width: 400px;
+      }
+      .player-name{
+        font-size: 1rem;
+      }
+      .player-current-box{
+        margin-left: 70px;
+        width: 60px;
+      }
+      .btn-roll{
+        padding: 10px 5px;
+        font-size: 0.8rem;
+      }
+      .btn-roll i{
+        /* font-size:1rem ; */
+        margin-right: 3px;
+        margin-top:2px ;
+      }
+    }
+    @media(max-width:360px){
+      .wrapper{
+        width: 350px;
+      }
+      .player-current-box{
+        margin-left: 50px;
+        width: 60px;
+      }
+      .player-current-label{
+        font-size: 0.6rem;
+      }
+      .btn-hold{
+        margin-left: 10px;
+      }
+    }
+    @media(max-width:320px){
+      .wrapper{
+        width: 320px;
+      }
+      .btn-roll i{
+        font-size:1rem ;
+      }
+      .player-current-box{
+        width: 50px;
+      }
+    }
+    @media(max-width:280px){
+      .wrapper{
+        width: 280px;
+      }
+      .btn-roll{
+        padding: 10px 15px;
+        font-size: 0.7rem;
+      }
+      .player-current-box{
+        width: 40px;
+      }
+      .player-current-label{
+        font-size: 0.5rem;
+      }
+      .dice{
+        width: 60px;
+      }
+    }
